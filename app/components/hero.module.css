@@ -1,0 +1,123 @@
+.hero {
+  padding-top: 80px;
+  width:98vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+}
+
+.heroContent {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap:3.8rem;
+}
+
+#heroName{
+  color: var(--accent);
+}
+
+.heroText {
+  flex: 1;
+  padding: 2rem;
+}
+
+.heroText h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.heroButtons button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border: var(--accent) 2px solid;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.heroButtons button:hover {
+  background-color: var(--accent);
+  color: var(--text-highlight);
+}
+
+.heroContentText {
+  font-size: 1.2rem !important;
+}
+
+.heroText p {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.heroImage img{
+  width:400px;
+  height:400px;
+  max-width: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 11px var(--box-shadow);
+}
+
+.heroImage{
+  padding: 4px 4px 0px;
+  border-radius: 50%;
+  background: linear-gradient(
+    270deg,
+    var(--text),
+    var(--highlight),
+    var(--accent)
+  );
+  background-size: 400% 400%;
+  animation: gradientRotate 6s ease infinite;
+
+  display: inline-block;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .heroContent {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .heroText h1 {
+    font-size: 3rem;
+  }
+
+  .heroText p {
+    font-size: 1.5rem;
+  }
+
+  .heroImage{
+    margin-top: 60px;
+  }
+
+  .heroImage img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
