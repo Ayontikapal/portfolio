@@ -1,9 +1,13 @@
 ## Portfolio Porject 
 
 Personal Portfolio using Next Js Framework
+
 -> Frontend UI using React Js components with CSS styling
+
 -> Backend with Next Js and Api integration
+
 -> Dark and Light mode switch and saving it on Local Storage
+
 -> Deployment on Vercel
 
 Live Link for the Portfolio: https://portfolio-iota-liart-99.vercel.app/
