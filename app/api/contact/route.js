@@ -12,19 +12,16 @@ export async function POST(req){
             },
         });
         await transporter.sendMail({
-            from: name,
+            from: process.env.EMAIL_USER, 
             replyTo: email,
             to: process.env.EMAIL_USER,
             subject: `New message from ${name}`,
             text: `From: ${email} \nName: ${name} \nMessage: ${message}`,
         });
-        return new Response(JSON.stringify({ message: "Email sent successfully" }), { status: 200 });
+        return Response.json({ message: "Email sent successfully" }, { status: 200 });
     }
     catch (error) {
     console.error("EMAIL ERROR:", error);
 
-    return Response.json(
-      { error: "Failed to send email" },
-      { status: 500 }
-    );
+    return Response.json({ error: "Failed to send email" },{ status: 500 });
 }}

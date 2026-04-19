@@ -15,6 +15,7 @@
   --text-highlight: #fff;
   --border:#1e0f4b;
   --box-shadow: rgba(165, 126, 255, 0.5);
+  --icon: #57177f;
 }
 
 .light{
@@ -22,11 +23,12 @@
   --text:#0d040d;
   --accent:  #c23ebe;
   --highlight: #233969;
-  --skill-bg: #f3f8ff;
+  --skill-bg: #eaf2fe;
   --text-secondary: #3e4959;
   --text-highlight: #fff;
   --border:#1e0f4b;
   --box-shadow: rgba(165, 126, 255, 0.5);
+  --icon:  #6c87ff;
 }
 
 

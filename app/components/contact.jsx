@@ -142,13 +142,6 @@ if (!res.ok) {
                     className={styles.icons}
                   />
                 </a>
-                <a href="https://www.instagram.com/a_pal07" target="_blank">
-                  <img
-                    src="https://www.svgrepo.com/show/452229/instagram-1.svg"
-                    alt="Instagram"
-                    className={styles.icons}
-                  />
-                </a>
               </div>
             </div>
           </div>

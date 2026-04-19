@@ -1,6 +1,7 @@
 export async function GET() {
 
 const projects = [
+  //wanderlust project
   {
     id: 1,
     title: "Wanderlust",
@@ -9,6 +10,7 @@ const projects = [
     github: "https://github.com/Ayontikapal/wanderlust",
     live: "https://wanderlust-project-4yt9.onrender.com/listings",
   },
+  //pomodoro timer
   {
     id: 2,
     title: "Pomodoro Timer",
@@ -26,7 +28,7 @@ const projects = [
     github: "https://github.com/Ayontikapal/color-palette-generator",
     live: "https://rawcdn.githack.com/Ayontikapal/color-palette-generator/2efae94a27b541e030178354641dbd9fb7d62d66/colorPalette.html",
   },
-  //amaxon ui clone
+  //amazon ui clone
     {
     id: 4,
     title: "Amazon UI Clone",
@@ -35,6 +37,7 @@ const projects = [
     github: "https://github.com/Ayontikapal/amazon-ui-clone",
     live: "https://rawcdn.githack.com/Ayontikapal/amazon-ui-clone/3ea18230118d84c4c46bfa3d49823f8f57706488/amazon.html",
   },
+  //password generator
   {
     id: 5,
     title: "Password Generator",
@@ -43,6 +46,7 @@ const projects = [
     github: "https://github.com/Ayontikapal/password-generator",
     live: "https://ayontikapal.github.io/password-generator/",
   },
+  //simple calculator
   {
     id: 6,
     title: "Simple Calculator",

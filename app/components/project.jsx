@@ -1,6 +1,7 @@
 "use client";
 import styles from "./project.module.css";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -22,7 +23,10 @@ export default function Projects() {
         <div className={styles.grid}>
           {projects.map((proj) => (
             <div key={proj.id} className={styles.card}>
+              <div className={styles.header}>
               <h3>{proj.title}</h3>
+              <i className="fa-solid fa-arrow-up-right-dots"></i>
+              </div>
               <p>{proj.desc}</p>
 
               <div className={styles.tech}>
