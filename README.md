@@ -10,6 +10,6 @@ Personal Portfolio using Next Js Framework
 
 -> Deployment on Vercel
 
-Live Link for the Portfolio: https://portfolio-iota-liart-99.vercel.app/
+Live Link for the Portfolio: https://portfolio-hhh3vjyvu-ayontikapals-projects.vercel.app/
 
 <img width="1897" height="908" alt="Screenshot 2026-04-16 195139" src="https://github.com/user-attachments/assets/4cbdb9d9-d870-4129-8d82-4bb6d4f0f715" />
