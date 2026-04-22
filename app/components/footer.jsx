@@ -1,5 +1,3 @@
-import styles from "./footer.module.css";
-
 export default function Footer() {
   return (
     <footer className="border-t border-solid border-border mt-18">
