@@ -2,7 +2,7 @@
 
 Personal Portfolio using Next Js Framework
 
--> Frontend UI using React Js components with CSS styling
+-> Frontend UI using React Js components with Tailwind css utility classes
 
 -> Backend with Next Js and Api integration
 
