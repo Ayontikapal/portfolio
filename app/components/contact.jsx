@@ -76,7 +76,7 @@ export default function Contact() {
               type="text"
               name="name"
               placeholder="Your Name"
-              className="p-3 rounded-md border-border border border-solid bg-skill-bg focus:outline-2 focus:outline-highlight"
+              className="p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight"
               value={form.name}
               onChange={handleChange}
               required
@@ -86,7 +86,7 @@ export default function Contact() {
               type="email"
               name="email"
               placeholder="Your Email"
-              className="p-3 rounded-md border-border border border-solid bg-skill-bg focus:outline-2 focus:outline-highlight"
+              className="p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight"
               value={form.email}
               onChange={handleChange}
               required
@@ -95,7 +95,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="p-3 rounded-md border-border border border-solid bg-skill-bg h-37 focus:outline-2 focus:outline-highlight mb-4"
+              className="p-3 rounded-md ring ring-border bg-skill-bg h-37 focus:outline-2 focus:outline-highlight mb-4"
               value={form.message}
               onChange={handleChange}
               required
@@ -105,7 +105,7 @@ export default function Contact() {
             </button>
           </div>
           <div className="w-full max-w-102.5 mt-5">
-            <p className="text-text-secondary text-lg border-accent border border-solid p-5 rounded-3xl">
+            <p className="text-text-secondary text-lg ring ring-accent p-5 rounded-3xl">
               Greetings to all the recruiters and potential collaborators out
               there! 👋
               <br></br>
@@ -114,7 +114,7 @@ export default function Contact() {
               you have a question, want to discuss a project, or just want to
               say hi, feel free to reach out!
             </p>
-            <div className="w-full max-w-102.5 mt-5 flex flex-col border-accent border border-solid items-center justify-center pt-4 gap-5 rounded-3xl">
+            <div className="w-full max-w-102.5 mt-5 flex flex-col ring ring-accent items-center justify-center pt-4 gap-5 rounded-3xl">
               <div className="flex items-end gap-2">
                 <i className="fas fa-envelope"></i>
                 <a className="no-underline text-text-secondary" href="mailto:ayontikapal@gmail.com" target="_blank">
