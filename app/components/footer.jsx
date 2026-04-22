@@ -17,7 +17,7 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/157006/linkedin.svg"
               alt="LinkedIn"
-              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
+              className="h-5.5 w-5.5 icon"
             />
           </a>
 
@@ -28,7 +28,7 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/449764/github.svg"
               alt="GitHub"
-              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
+              className="h-5.5 w-5.5 icon"
             />
           </a>
 
@@ -39,7 +39,7 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/452213/gmail.svg"
               alt="Email"
-              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
+              className="h-5.5 w-5.5 icon"
             />
           </a>
         </div>

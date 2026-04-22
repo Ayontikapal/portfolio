@@ -76,7 +76,7 @@ export default function Contact() {
               type="text"
               name="name"
               placeholder="Your Name"
-              className="p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight"
+              className="input"
               value={form.name}
               onChange={handleChange}
               required
@@ -86,7 +86,7 @@ export default function Contact() {
               type="email"
               name="email"
               placeholder="Your Email"
-              className="p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight"
+              className="input"
               value={form.email}
               onChange={handleChange}
               required
@@ -95,7 +95,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="p-3 rounded-md ring ring-border bg-skill-bg h-37 focus:outline-2 focus:outline-highlight mb-4"
+              className="input mb-4"
               value={form.message}
               onChange={handleChange}
               required
@@ -130,14 +130,14 @@ export default function Contact() {
                   <img
                     src="https://www.svgrepo.com/show/157006/linkedin.svg"
                     alt="LinkedIn"
-                    className="h-6.25 w-6.25 m-2.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
+                    className="h-6.25 w-6.25 m-2.5 icon"
                   />
                 </a>
                 <a href="https://github.com/Ayontikapal" target="_blank">
                   <img
                     src="https://www.svgrepo.com/show/449764/github.svg"
                     alt="GitHub"
-                    className="h-6.25 w-6.25 m-2.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
+                    className="h-6.25 w-6.25 m-2.5 icon"
                   />
                 </a>
               </div>

@@ -15,7 +15,7 @@ export default function Hero(){
               continuously learning new technologies.
             </p>
             <div className="flex justify-center flex-wrap gap-5 mt-4">
-              <button className="py-3 px-6 text-xl ring ring-accent rounded-3xl cursor-pointer bg-bg text-text hover:bg-accent hover:text-white"
+              <button className="button"
                 onClick={() => {
                   document.getElementById("projects").scrollIntoView({
                     behavior: "smooth",
@@ -24,7 +24,7 @@ export default function Hero(){
               >
                 View Projects
               </button> 
-              <button className="py-3 px-6 text-xl ring ring-accent rounded-3xl cursor-pointer bg-bg text-text hover:bg-accent hover:text-white"
+              <button className="button"
                 onClick={() => {
                   document.getElementById("contact").scrollIntoView({
                     behavior: "smooth",

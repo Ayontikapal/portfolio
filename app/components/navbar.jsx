@@ -34,10 +34,10 @@ export default function Navbar() {
         <div className="font-bold text-[1.2rem] font-serif italic">Ayontika's Portfolio</div>
 
         <div className="flex gap-[2.7rem]">
-          <a href="#home" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Home</a>
-          <a href="#about" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">About</a>
-          <a href="#projects" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Projects</a>
-          <a href="#contact" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Contact</a>
+          <a href="#home" className="navlink">Home</a>
+          <a href="#about" className="navlink">About</a>
+          <a href="#projects" className="navlink">Projects</a>
+          <a href="#contact" className="navlink">Contact</a>
         </div>
 
         <div className="text-[1.2rem] hover:opacity-80">

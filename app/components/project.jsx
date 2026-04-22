@@ -36,8 +36,8 @@ export default function Projects() {
               </div>
 
               <div className="flex gap-3">
-                <a className="text-highlight text-sm hover:underline" href={proj.github} target="_blank">GitHub</a>
-                <a className="text-highlight text-sm hover:underline" href={proj.live} target="_blank">Live</a>
+                <a className="link" href={proj.github} target="_blank">GitHub</a>
+                <a className="link" href={proj.live} target="_blank">Live</a>
               </div>
             </div>
           ))}

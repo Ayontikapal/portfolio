@@ -43,6 +43,24 @@
   --color-icon: var(--icon);
 }
 
+@layer components{
+  .navlink{
+    @apply no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden
+  }
+  .button{
+    @apply py-3 px-6 text-xl ring ring-accent rounded-3xl cursor-pointer bg-bg text-text hover:bg-accent hover:text-white
+  }
+  .link{
+    @apply text-highlight text-sm hover:underline
+  }
+  .input{
+    @apply p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight
+  }
+  .icon{
+    @apply transition transform opacity-100 duration-200 ease-in-out hover:scale-[1.2] hover:opacity-80
+  }
+}
+
 body{
   margin:0;
   padding:0;
