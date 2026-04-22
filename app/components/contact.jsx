@@ -29,24 +29,24 @@ export default function Contact() {
       setStatus("");
 
       const res = await fetch("/api/contact", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(form),
-});
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-const data = await res.json();
+      const data = await res.json();
 
-if (!res.ok) {
-  console.log("Backend error:", data);
-  throw new Error(data.error || "Failed to send message");
-}
+      if (!res.ok) {
+        console.log("Backend error:", data);
+        throw new Error(data.error || "Failed to send message");
+      }
 
       setStatus("Message sent successfully ✅");
       setTimeout(() => {
-            setStatus("");
-        }, 3000);
+        setStatus("");
+      }, 3000);
 
       // reset form
       setForm({
@@ -63,51 +63,50 @@ if (!res.ok) {
   };
 
   return (
-    <section id="contact" className={styles.section}>
-      <div className={styles.container}>
-        <h2 className={styles.title}>Contact me</h2>
+    <section id="contact">
+      <div className="max-w-[98vw] m-auto px-5 text-center">
+        <h2 className="text-5xl font-bold text-accent mb-7">Contact me</h2>
 
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.formContent}>
-            <div className="formTitles">Name:</div>
+        <form
+          className="flex justify-evenly text-left flex-wrap gap-8 max-lg:justify-center"
+          onSubmit={handleSubmit}
+        >
+          <div className="flex flex-col gap-2.5 w-full max-w-102.5">
+            <div className="text-text">Name:</div>
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              className={styles.input}
+              className="p-3 rounded-md border-border border border-solid bg-skill-bg focus:outline-2 focus:outline-highlight"
               value={form.name}
               onChange={handleChange}
               required
             />
-            <div className="formTitles">Email:</div>
+            <div className="text-(--text)">Email:</div>
             <input
               type="email"
               name="email"
               placeholder="Your Email"
-              className={styles.input}
+              className="p-3 rounded-md border-border border border-solid bg-skill-bg focus:outline-2 focus:outline-highlight"
               value={form.email}
               onChange={handleChange}
               required
             />
-            <div className="formTitles">Enter your Message:</div>
+            <div className="text-(--text)">Enter your Message:</div>
             <textarea
               name="message"
               placeholder="Your Message"
-              className={styles.textarea}
+              className="p-3 rounded-md border-border border border-solid bg-skill-bg h-37 focus:outline-2 focus:outline-highlight mb-4"
               value={form.message}
               onChange={handleChange}
               required
             />
-            <button
-              type="submit"
-              className={styles.button}
-              disabled={loading}
-            >
+            <button type="submit" className="p-3 bg-bg ring ring-accent text-lg text-text rounded-md cursor-pointer hover:bg-accent hover:text-text-highlight" disabled={loading}>
               {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
-          <div className={styles.contactBox}>
-            <p className={styles.contactText}>
+          <div className="w-full max-w-102.5 mt-5">
+            <p className="text-text-secondary text-lg border-accent border border-solid p-5 rounded-3xl">
               Greetings to all the recruiters and potential collaborators out
               there! 👋
               <br></br>
@@ -116,15 +115,15 @@ if (!res.ok) {
               you have a question, want to discuss a project, or just want to
               say hi, feel free to reach out!
             </p>
-            <div className={styles.contactIcons}>
-                <div className={styles.contactMail}> 
-                  <i className="fas fa-envelope"></i>
-                  <a href="mailto:ayontikapal@gmail.com" target="_blank">
-                  <p className={styles.contactMailText}>ayontikapal@gmail.com</p>
+            <div className="w-full max-w-102.5 mt-5 flex flex-col border-accent border border-solid items-center justify-center pt-4 gap-5 rounded-3xl">
+              <div className="flex items-end gap-2">
+                <i className="fas fa-envelope"></i>
+                <a className="no-underline text-text-secondary" href="mailto:ayontikapal@gmail.com" target="_blank">
+                    ayontikapal@gmail.com
                 </a>
-                </div>
-              <div className={styles.contactIconsText}>My Socials:</div>
-              <div className={styles.iconsContainer}>
+              </div>
+              <div className="text-text">My Socials:</div>
+              <div className="flex mb-2">
                 <a
                   href="https://www.linkedin.com/in/ayontikapal/"
                   target="_blank"
@@ -132,21 +131,21 @@ if (!res.ok) {
                   <img
                     src="https://www.svgrepo.com/show/157006/linkedin.svg"
                     alt="LinkedIn"
-                    className={styles.icons}
+                    className="h-6.25 w-6.25 m-2.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
                   />
                 </a>
                 <a href="https://github.com/Ayontikapal" target="_blank">
                   <img
                     src="https://www.svgrepo.com/show/449764/github.svg"
                     alt="GitHub"
-                    className={styles.icons}
+                    className="h-6.25 w-6.25 m-2.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
                   />
                 </a>
               </div>
             </div>
           </div>
         </form>
-        {status && <p className={styles.status}>{status}</p>}
+        {status && <p className="fixed top-5 left-[50%] -translate-x-[50%] z-20 text-sm text-white bg-accent py-3 px-5 rounded-lg shadow-lg">{status}</p>}
       </div>
     </section>
   );

@@ -2,17 +2,16 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        
-        <div className={styles.top}>
-          <h3 className={styles.name}>Ayontika's Portfolio</h3>
-          <p className={styles.tagline}>
+    <footer className="border-t border-solid border-border mt-18">
+      <div className="max-w-275 m-auto px-5 text-center mb-5 ">
+        <div className="mt-7">
+          <h3 className="text-2xl font-bold text-highlight max-md:text-xl">Ayontika's Portfolio</h3>
+          <p className="text-sm text-text-secondary max-md:text-xs">
             Exploring the world of web development
           </p>
         </div>
 
-        <div className={styles.iconsContainer}>
+        <div className="flex justify-center gap-5 my-5">
           <a
             href="https://www.linkedin.com/in/ayontikapal/"
             target="_blank"
@@ -20,7 +19,7 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/157006/linkedin.svg"
               alt="LinkedIn"
-              className={styles.icon}
+              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
             />
           </a>
 
@@ -31,7 +30,7 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/449764/github.svg"
               alt="GitHub"
-              className={styles.icon}
+              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
             />
           </a>
 
@@ -42,12 +41,12 @@ export default function Footer() {
             <img
               src="https://www.svgrepo.com/show/452213/gmail.svg"
               alt="Email"
-              className={styles.icon}
+              className="h-5.5 w-5.5 transition transform opacity duration-200 ease hover:scale-[1.2] hover:opacity-80"
             />
           </a>
         </div>
 
-        <p className={styles.copy}>
+        <p className="text-xs text-text-secondary">
           © {new Date().getFullYear()} Ayontika. All rights reserved.
         </p>
 

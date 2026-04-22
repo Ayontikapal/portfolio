@@ -1,6 +1,6 @@
+@import "tailwindcss";
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,9 +12,6 @@
   --highlight: #FF76F7;
   --skill-bg: #1e293b;
   --text-secondary: #94a3b8;
-  --text-highlight: #fff;
-  --border:#1e0f4b;
-  --box-shadow: rgba(165, 126, 255, 0.5);
   --icon: #57177f;
 }
 
@@ -25,20 +22,36 @@
   --highlight: #233969;
   --skill-bg: #eaf2fe;
   --text-secondary: #3e4959;
-  --text-highlight: #fff;
-  --border:#1e0f4b;
-  --box-shadow: rgba(165, 126, 255, 0.5);
   --icon:  #6c87ff;
 }
 
+@keyframes gradientRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@theme{
+  --animate-gradientRotate: gradientRotate 6s ease infinite;
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+  --color-highlight: var(--highlight);
+  --color-skill-bg: var(--skill-bg);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: #1e0f4b;
+  --color-icon: var(--icon);
+}
 
 body{
+  margin:0;
+  padding:0;
   background-color: var(--bg);
   color: var(--text);
 }
 
 section {
-  padding: 80px 0;
+  padding: 70px 0;
 }
 
 html {

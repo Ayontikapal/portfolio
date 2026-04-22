@@ -1,6 +1,5 @@
 "use client";
-import { useLayoutEffect, useState } from "react";
-import styles from "./navbar.module.css";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isLight, setIsLight] = useState(false);
@@ -18,7 +17,7 @@ export default function Navbar() {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if(savedTheme==="light"){
       document.documentElement.classList.add("light");
@@ -26,21 +25,23 @@ export default function Navbar() {
     }
   }, []);
 
-  return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        
-        <div className={styles.logo}>Ayontika's Portfolio</div>
 
-        <div className={styles.navLinks}>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+  return (
+    <nav
+      className="fixed w-full bg-bg border-b border-border z-10"
+    >
+      <div className="max-w-full m-auto py-5 px-10 flex justify-between items-center">
+        <div className="font-bold text-[1.2rem] font-serif italic">Ayontika's Portfolio</div>
+
+        <div className="flex gap-[2.7rem]">
+          <a href="#home" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Home</a>
+          <a href="#about" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">About</a>
+          <a href="#projects" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Projects</a>
+          <a href="#contact" className="no-underline text-text text-[1.1rem] hover:text-highlight font-bold max-md:hidden">Contact</a>
         </div>
 
-        <div className={styles.modeSwitch}>
-          <button onClick={toggleTheme} className={styles.modeButton}>
+        <div className="text-[1.2rem] hover:opacity-80">
+          <button onClick={toggleTheme}>
             <i className={`fas ${isLight ? "fa-moon" : "fa-sun"}`}></i>
           </button>
         </div>
