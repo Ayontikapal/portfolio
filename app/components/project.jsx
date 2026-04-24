@@ -1,18 +1,7 @@
-"use client";
-import { useEffect, useState } from "react";
+import getProjects from "./data/projects.js";
 
 export default function Projects() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const res = await fetch("/api/projects");
-      const data = await res.json();
-      setProjects(data);
-    };
-
-    fetchProjects();
-  }, []);
+  const projects=getProjects();
 
   return (
     <section id="projects">

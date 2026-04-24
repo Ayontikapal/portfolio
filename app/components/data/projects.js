@@ -1,6 +1,5 @@
-export async function GET() {
-
-const projects = [
+export default function getProjects(){
+  const projects=[
   //wanderlust project
   {
     id: 1,
@@ -57,5 +56,5 @@ const projects = [
   }
 ];
 
-return Response.json(projects);
+return projects;
 }
