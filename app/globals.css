@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 * {
   box-sizing: border-box;
@@ -6,16 +10,6 @@
 }
 
 :root {
-  --bg: #000;
-  --text: #e2e8f0;
-  --accent: #6f43c3;
-  --highlight: #ff76f7;
-  --skill-bg: #1e293b;
-  --text-secondary: #94a3b8;
-  --icon: #57177f;
-}
-
-.light {
   --bg: #fdf9fd;
   --text: #0d040d;
   --accent: #c23ebe;
@@ -23,6 +17,16 @@
   --skill-bg: #eaf2fe;
   --text-secondary: #3e4959;
   --icon: #6c87ff;
+}
+
+.dark {
+  --bg: #0d040d;
+  --text: #e2e8f0;
+  --accent: #6f43c3;
+  --highlight: #ff76f7;
+  --skill-bg: #1e293b;
+  --text-secondary: #94a3b8;
+  --icon: #57177f;
 }
 
 @keyframes gradientRotate {
@@ -39,13 +43,12 @@
 
 @theme {
   --animate-gradientRotate: gradientRotate 6s ease infinite;
-  --color-bg: var(--bg);
+  --color-bg:  var(--bg);
   --color-text: var(--text);
   --color-accent: var(--accent);
   --color-highlight: var(--highlight);
   --color-skill-bg: var(--skill-bg);
   --color-text-secondary: var(--text-secondary);
-  --color-border: #1e0f4b;
   --color-icon: var(--icon);
 }
 
@@ -60,10 +63,13 @@
     @apply text-highlight text-sm hover:underline;
   }
   .input {
-    @apply p-3 rounded-md ring ring-border bg-skill-bg focus:outline-2 focus:outline-highlight;
+    @apply p-3 rounded-md ring ring-purple-950 bg-skill-bg focus:outline-2 focus:outline-highlight;
   }
   .icon {
     @apply transition transform opacity-100 duration-200 ease-in-out hover:scale-[1.2] hover:opacity-80;
+  }
+  .after{
+    @apply after:ml-0.5 after:text-red-500 after:content-['*']
   }
 }
 
@@ -81,5 +87,5 @@
 
   html {
     scroll-behavior: smooth;
-  }
+}
 }

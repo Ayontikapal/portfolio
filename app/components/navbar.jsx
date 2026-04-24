@@ -2,29 +2,24 @@
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [isLight, setIsLight] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  const toggleTheme = () => {
-    const newTheme = !isLight;
-    setIsLight(newTheme);
+const toggleTheme = () => {
+  setIsDark(prev => {
+    const newTheme = !prev;
+    document.documentElement.classList.toggle("dark", newTheme);
+    localStorage.setItem("theme", newTheme ? "dark" : "light");
+    return newTheme;
+  });
+};
 
-    if (newTheme) {
-      document.documentElement.classList.add("light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.remove("light");
-      localStorage.setItem("theme", "dark");
-    }
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if(savedTheme==="light"){
-      document.documentElement.classList.add("light");
-      setIsLight(true);
-    }
-  }, []);
-
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.documentElement.classList.add("dark");
+    setIsDark(true);
+  }
+}, []);
 
   return (
     <nav
@@ -42,7 +37,7 @@ export default function Navbar() {
 
         <div className="text-[1.2rem] hover:opacity-80">
           <button onClick={toggleTheme}>
-            <i className={`fas ${isLight ? "fa-moon" : "fa-sun"}`}></i>
+            <i className={`fas ${isDark ? "fa-sun" : "fa-moon"}`}></i>
           </button>
         </div>
       </div>

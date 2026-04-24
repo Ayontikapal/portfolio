@@ -71,7 +71,9 @@ export default function Contact() {
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col gap-2.5 w-full max-w-102.5">
-            <div className="text-text">Name:</div>
+            <div className="text-text after">
+              Name:
+            </div>
             <input
               type="text"
               name="name"
@@ -81,7 +83,9 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <div className="text-(--text)">Email:</div>
+            <div className="text-text after">
+              Email:
+            </div>
             <input
               type="email"
               name="email"
@@ -91,16 +95,23 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <div className="text-(--text)">Enter your Message:</div>
+            <div className="text-text after">
+              Enter your Message:
+            </div>
             <textarea
               name="message"
               placeholder="Your Message"
-              className="input mb-4"
+              className="input h-32.5 mb-4"
               value={form.message}
               onChange={handleChange}
               required
             />
-            <button type="submit" className="p-3 bg-bg ring ring-accent text-lg text-text rounded-md cursor-pointer hover:bg-accent hover:text-text-highlight" disabled={loading}>
+            <button
+              type="submit"
+              className="p-3 bg-bg ring ring-accent text-lg text-text rounded-md 
+              cursor-pointer hover:bg-accent hover:text-white"
+              disabled={loading}
+            >
               {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
@@ -117,8 +128,12 @@ export default function Contact() {
             <div className="w-full max-w-102.5 mt-5 flex flex-col ring ring-accent items-center justify-center pt-4 gap-5 rounded-3xl">
               <div className="flex items-end gap-2">
                 <i className="fas fa-envelope"></i>
-                <a className="no-underline text-text-secondary" href="mailto:ayontikapal@gmail.com" target="_blank">
-                    ayontikapal@gmail.com
+                <a
+                  className="no-underline text-text-secondary"
+                  href="mailto:ayontikapal@gmail.com"
+                  target="_blank"
+                >
+                  ayontikapal@gmail.com
                 </a>
               </div>
               <div className="text-text">My Socials:</div>
@@ -144,7 +159,11 @@ export default function Contact() {
             </div>
           </div>
         </form>
-        {status && <p className="fixed top-5 left-[50%] -translate-x-[50%] z-20 text-sm text-white bg-accent py-3 px-5 rounded-lg shadow-lg">{status}</p>}
+        {status && (
+          <p className="fixed top-5 left-[50%] -translate-x-[50%] z-20 text-sm text-white bg-accent py-3 px-5 rounded-lg shadow-lg">
+            {status}
+          </p>
+        )}
       </div>
     </section>
   );
