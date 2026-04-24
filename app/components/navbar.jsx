@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed w-full bg-bg border-b border-border z-10 top-0"
+      className="fixed w-full bg-bg border-b border-violet-950 z-10 top-0"
     >
       <div className="max-w-full m-auto py-5 px-10 flex justify-between items-center">
         <div className="font-bold text-[1.2rem] font-serif italic">Ayontika's Portfolio</div>

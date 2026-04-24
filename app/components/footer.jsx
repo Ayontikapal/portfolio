@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-solid border-border mt-18">
+    <footer className="border-t border-violet-950 mt-18">
       <div className="max-w-275 m-auto px-5 text-center mb-5 ">
         <div className="mt-7">
           <h3 className="text-2xl font-bold text-highlight max-md:text-xl">Ayontika's Portfolio</h3>
