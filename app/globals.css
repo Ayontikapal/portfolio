@@ -37,18 +37,8 @@
   }
 }
 
-@keyframes marquee{
-  0%{
-    transform:translateX(0%);
-  }
-  100%{
-    transform:translateX(-50%);
-  }
-}
-
 @theme {
   --animate-gradientRotate: gradientRotate 6s ease infinite;
-  --animate-marquee: marquee 20s linear infinite;
   --color-bg:  var(--bg);
   --color-text: var(--text);
   --color-accent: var(--accent);

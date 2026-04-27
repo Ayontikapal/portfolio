@@ -32,7 +32,7 @@ export default function Projects() {
           {projects.map((proj) => (
             <motion.div
               key={proj.id}
-              whileHover={{scale:1.1}}
+              whileHover={{scale:1.05}}
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 show: {
@@ -45,11 +45,12 @@ export default function Projects() {
                   },
                 },
               }}
-              className="flex flex-col justify-between p-5 bg-skill-bg rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1.25 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)]"
+              className="flex flex-col justify-between p-5 bg-skill-bg rounded-xl hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)]"
             >
               <div className="flex items-center justify-between mb-2.5">
                 <h3 className="text-xl font-semibold">{proj.title}</h3>
-                <div className="text-center w-9.5 h-9.5 text-[1.4rem] text-text bg-icon rounded-[5px]">
+                <div
+                 className="text-center w-9.5 h-9.5 text-[1.4rem] text-text bg-icon rounded-[5px]">
                   <i className="fa-solid fa-arrow-up-right-dots"></i>
                 </div>
               </div>
@@ -57,7 +58,8 @@ export default function Projects() {
 
               <div className="text-sm mb-3.75 flex flex-wrap">
                 {proj.tech.map((t, i) => (
-                  <motion.div whileHover={{ scale: 1.2, rotate: 10 }}
+                  <motion.div initial={{scale:1}} 
+                  whileHover={{ scale: 1.2, rotate: 10 }}
   transition={{ type: "spring", stiffness: 200 }}
    key={i} className="bg-conic from-red-300 to-purple-300 p-1.25 rounded-full m-1">
                     <img
