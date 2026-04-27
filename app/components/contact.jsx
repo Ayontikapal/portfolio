@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import {motion} from "motion/react";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -61,20 +62,66 @@ export default function Contact() {
     }
   };
 
+  const item={
+    hidden: {
+      opacity: 0,
+      scale:0.7
+    },
+    show: {
+      opacity: 1,
+      scale:1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const container={
+    hidden: {
+      opacity: 0,
+      x:40
+    },
+    show: {
+      opacity: 1,
+      x:0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  }
+
   return (
     <section id="contact">
       <div className="max-w-[98vw] m-auto px-5 text-center">
-        <h2 className="text-5xl font-bold text-accent mb-7">Contact me</h2>
+        <motion.h2 initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+        className="text-5xl font-bold text-accent mb-7">CONTACT ME</motion.h2>
 
         <form
           className="flex justify-evenly text-left flex-wrap gap-8 max-lg:justify-center"
           onSubmit={handleSubmit}
         >
-          <div className="flex flex-col gap-2.5 w-full max-w-102.5">
-            <div className="text-text after">
+          <motion.div initial="hidden"
+          whileInView="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                type:"spring",
+          stiffness:80,
+          damping:30,
+                staggerChildren: 0.15
+              },
+            },
+          }}
+          className="flex flex-col gap-2.5 w-full max-w-102.5">
+            <motion.div variants={item} className="text-text after">
               Name:
-            </div>
-            <input
+            </motion.div>
+            <motion.input variants={item}
               type="text"
               name="name"
               placeholder="Your Name"
@@ -83,10 +130,10 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <div className="text-text after">
+            <motion.div variants={item} className="text-text after">
               Email:
-            </div>
-            <input
+            </motion.div>
+            <motion.input variants={item}
               type="email"
               name="email"
               placeholder="Your Email"
@@ -95,10 +142,10 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <div className="text-text after">
+            <motion.div  variants={item} className="text-text after">
               Enter your Message:
-            </div>
-            <textarea
+            </motion.div>
+            <motion.textarea variants={item}
               name="message"
               placeholder="Your Message"
               className="input h-32.5 mb-4"
@@ -106,17 +153,30 @@ export default function Contact() {
               onChange={handleChange}
               required
             />
-            <button
+            <motion.button variants={item}
               type="submit"
               className="p-3 bg-bg ring ring-accent text-lg text-text rounded-md 
               cursor-pointer hover:bg-accent hover:text-white"
               disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
-            </button>
-          </div>
-          <div className="w-full max-w-102.5 mt-5">
-            <p className="text-text-secondary text-lg ring ring-accent p-5 rounded-3xl">
+            </motion.button>
+          </motion.div>
+          <motion.div initial="hidden"
+          whileInView="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                type:"spring",
+          stiffness:80,
+          damping:30,
+                staggerChildren: 0.3
+              },
+            },
+          }}
+          className="w-full max-w-102.5 mt-5">
+            <motion.p variants={container} className="text-text-secondary text-lg ring ring-accent p-5 rounded-3xl">
               Greetings to all the recruiters and potential collaborators out
               there! 👋
               <br></br>
@@ -124,8 +184,8 @@ export default function Contact() {
               I'm always open to new opportunities and collaborations. Whether
               you have a question, want to discuss a project, or just want to
               say hi, feel free to reach out!
-            </p>
-            <div className="w-full max-w-102.5 mt-5 flex flex-col ring ring-accent items-center justify-center pt-4 gap-5 rounded-3xl">
+            </motion.p>
+            <motion.div variants={container} className="w-full max-w-102.5 mt-5 flex flex-col ring ring-accent items-center justify-center pt-4 gap-5 rounded-3xl">
               <div className="flex items-end gap-2">
                 <i className="fas fa-envelope"></i>
                 <a
@@ -156,8 +216,8 @@ export default function Contact() {
                   />
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </form>
         {status && (
           <p className="fixed top-5 left-[50%] -translate-x-[50%] z-20 text-sm text-white bg-accent py-3 px-5 rounded-lg shadow-lg">

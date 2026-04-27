@@ -37,8 +37,18 @@
   }
 }
 
+@keyframes marquee{
+  0%{
+    transform:translateX(0%);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
 @theme {
   --animate-gradientRotate: gradientRotate 6s ease infinite;
+  --animate-marquee: marquee 20s linear infinite;
   --color-bg:  var(--bg);
   --color-text: var(--text);
   --color-accent: var(--accent);
@@ -59,13 +69,16 @@
     @apply text-highlight text-sm hover:underline;
   }
   .input {
-    @apply p-3 rounded-md ring ring-purple-950 bg-skill-bg focus:outline-2 focus:outline-highlight;
+    @apply p-3 rounded-md ring ring-purple-950 bg-skill-bg focus:outline-2 focus:outline-highlight focus:outline-offset-1;
   }
   .icon {
     @apply transition transform opacity-100 duration-200 ease-in-out hover:scale-[1.2] hover:opacity-80;
   }
   .after{
     @apply after:ml-0.5 after:text-red-500 after:content-['*']
+  }
+  .color{
+    @apply -bg-linear-150 from-blue-700/50 via-pink-700/50 to-fuchsia-700/50 font-medium
   }
 }
 

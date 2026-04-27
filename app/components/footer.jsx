@@ -1,7 +1,13 @@
+"use client";
+
+import {motion} from 'motion/react';
 export default function Footer() {
   return (
     <footer className="border-t border-violet-950 mt-18">
-      <div className="max-w-275 m-auto px-5 text-center mb-5 ">
+      <motion.div initial={{scale:0.7, y:50, opacity:0}}
+      whileInView={{scale:1, y:0, opacity:1}}
+      transition={{duration:1.2}}
+      className="max-w-275 m-auto px-5 text-center mb-5 ">
         <div className="mt-7">
           <h3 className="text-2xl font-bold text-highlight max-md:text-xl">Ayontika's Portfolio</h3>
           <p className="text-sm text-text-secondary max-md:text-xs">
@@ -48,7 +54,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Ayontika. All rights reserved.
         </p>
 
-      </div>
+      </motion.div>
     </footer>
   );
 }
