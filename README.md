@@ -8,6 +8,8 @@ Personal Portfolio using Next Js Framework
 
 -> Dark and Light mode switch and saving it on Local Storage
 
+-> Added Motion animations using Framer motion
+
 -> Deployment on Vercel
 
 Live Link for the Portfolio: https://portfolio-gpwzvnqh5-ayontikapals-projects.vercel.app/
