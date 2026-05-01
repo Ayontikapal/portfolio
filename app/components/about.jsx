@@ -31,22 +31,6 @@ export default function About() {
       },
     },
   };
-  const container = {
-    hidden: {
-      opacity: 0,
-      x: -50,
-      scale: 0.7,
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-      },
-    },
-  };
   return (
     <section id="about">
       <div className="max-w-[80vw] m-auto text-center relative">
@@ -92,7 +76,7 @@ export default function About() {
           }}
           src={Chat.src}
           alt="profile"
-          className="w-45 h-45 absolute top-30 -right-5 rotate-40 max-lg:w-35 max-lg:h-35 max-md:w-25 max-md:h-25 max-sm:hidden"
+          className="w-45 h-45 absolute top-30 -right-5 rotate-20 max-lg:w-35 max-lg:h-35 max-md:w-25 max-md:h-25 max-sm:hidden"
         />
         <motion.h2
           initial={{ opacity: 0, y: 70 }}
