@@ -36,7 +36,7 @@ useEffect(() => {
       stiffness:80,
       damping:30,
       duration:1}}
-      className="fixed w-full bg-bg border-b border-violet-950 z-10 top-0"
+      className="fixed w-full bg-bg border-b border-accent z-10 top-0"
     >
       <div className="absolute bottom-0 w-full h-0.75">
     <motion.div

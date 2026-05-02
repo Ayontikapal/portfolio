@@ -3,15 +3,14 @@ import profileImage from "./assets/profile_image.jpeg";
 import { motion } from "motion/react";
 
 export default function Hero() {
-
   const item = {
     hidden: {
-      scale:0.7,
+      scale: 0.7,
       opacity: 0,
-      y: 50,
+      y: 50
     },
     show: {
-      scale:1,
+      scale: 1,
       opacity: 1,
       y: 0,
       transition: {
@@ -23,7 +22,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="w-[98vw] flex items-center justify-center min-h-[calc(100vh-70px)]"
+      className="w-[98vw] flex items-center justify-center min-h-screen"
     >
       <div className="text-center flex items-center gap-24 max-lg:flex-col-reverse max-lg:gap-10">
         <motion.div
@@ -33,17 +32,17 @@ export default function Hero() {
             hidden: {},
             show: {
               transition: {
-                type:"spring",
-          stiffness:80,
-          damping:30,
-                staggerChildren: 0.4,
+                type: "spring",
+                stiffness: 80,
+                damping: 30,
+                staggerChildren: 0.3,
                 delayChildren: 0.3,
               },
             },
           }}
           className="flex flex-col flex-1 p-8 gap-6"
         >
-          <motion.h1
+          <motion.h1 
             variants={item}
             className="text-6xl font-bold max-lg:text-5xl"
           >
@@ -64,7 +63,7 @@ export default function Hero() {
             className="flex justify-center flex-wrap gap-5 mt-4"
           >
             <motion.button
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.04}}
               whileTap={{ scale: 0.97 }}
               className="button"
               onClick={() => {
@@ -75,7 +74,8 @@ export default function Hero() {
             >
               View Projects
             </motion.button>
-            <motion.button whileHover={{ scale: 1.04 }}
+            <motion.button
+              whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="button"
               onClick={() => {
@@ -84,20 +84,21 @@ export default function Hero() {
                 });
               }}
             >
-              Contact Me 
+              Contact Me
             </motion.button>
           </motion.div>
         </motion.div>
 
-        <motion.div 
-        initial={{opacity:0, y:70}}
-        whileInView={{opacity:1, y:0}}
-        transition={{
-          type:"spring",
-          stiffness:60,
-          damping:20
-        }}
-        className="w-102 h-102 inline-block p-[4px_4px_0px] rounded-full bg-linear-270 from-text via-highlight to-accent bg-size-[400%_400%] animate-gradientRotate max-lg:w-82 max-lg:h-82 max-lg:mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 20,
+          }}
+          className="w-102 h-102 inline-block p-[4px_4px_0px] rounded-full bg-linear-270 from-text via-highlight to-accent bg-size-[400%_400%] animate-gradientRotate max-lg:w-82 max-lg:h-82 max-lg:mt-12"
+        >
           <img
             src={profileImage.src}
             alt="profile"

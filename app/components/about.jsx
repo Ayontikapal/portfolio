@@ -29,7 +29,7 @@ export default function About() {
         duration: 0.8,
         ease: "easeInOut",
       },
-    },
+    }
   };
   return (
     <section id="about">

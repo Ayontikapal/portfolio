@@ -23,7 +23,7 @@ export default function Projects() {
             hidden: {},
             show: {
               transition: {
-                staggerChildren: 0.3
+                staggerChildren: 0.3,
               },
             },
           }}
@@ -32,7 +32,7 @@ export default function Projects() {
           {projects.map((proj) => (
             <motion.div
               key={proj.id}
-              whileHover={{scale:1.05}}
+              whileHover={{ scale: 1.05 }}
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 show: {
@@ -41,7 +41,7 @@ export default function Projects() {
                   transition: {
                     type: "spring",
                     stiffness: 70,
-                    damping: 20
+                    damping: 20,
                   },
                 },
               }}
@@ -49,8 +49,7 @@ export default function Projects() {
             >
               <div className="flex items-center justify-between mb-2.5">
                 <h3 className="text-xl font-semibold">{proj.title}</h3>
-                <div
-                 className="text-center w-9.5 h-9.5 text-[1.4rem] text-text bg-icon rounded-[5px]">
+                <div className="text-center w-9.5 h-9.5 text-[1.4rem] text-text bg-icon rounded-[5px]">
                   <i className="fa-solid fa-arrow-up-right-dots"></i>
                 </div>
               </div>
@@ -58,17 +57,15 @@ export default function Projects() {
 
               <div className="text-sm mb-3.75 flex flex-wrap">
                 {proj.tech.map((t, i) => (
-                  <motion.div initial={{scale:1}} 
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-  transition={{ type: "spring", stiffness: 200 }}
-   key={i} className="bg-conic from-red-300 to-purple-300 p-1.25 rounded-full m-1">
-                    <img
-                    src={t.src}
-                    alt="tech"
-                    className="w-6 h-6"
-                  />
+                  <motion.div
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 200 }}
+                    key={i}
+                    className="bg-conic from-red-300 to-purple-300 p-1.25 rounded-full m-1"
+                  >
+                    <img src={t.src} alt="tech" className="w-6 h-6" />
                   </motion.div>
-                  
                 ))}
               </div>
 
